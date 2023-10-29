@@ -23,7 +23,6 @@ class Trainer(object):
         # Model configuration.
         self.args = args
         self.device = torch.device(f'cuda:{args.cuda_num}' if torch.cuda.is_available() else 'cpu')
-        self.device = 'cpu'
         print(self.device)
         print(torch.__version__)
 
