@@ -9,12 +9,12 @@ import torch.backends.cudnn as cudnn
 from utils import my_makedir, loadPickle, dumpPickle, cal_STOI_PESQ_CSIG_CBAK_COVL_SSNR
 
 
-n_cuda = 1
+n_cuda = 0
 NUMBER_Test = 1000
 batch_size = 1
-test_data_path = "/mnt/aoni04/ogino/oki_project/Oki_Update/dataset/MUBASE/test_data"
-model_G_path = "/mnt/aoni04/ogino/oki_project/Oki_Update/results_old/CycleGAN/reverb_t0.2.0.5_nangle8090100/MUBASE/Batch16_0/U_Net_MultiScaleDiscriminator_Scale4_62_45/rals_l120/1.0_1.5_10.0/seed0/train/model/G_modelA2B_245.pth"
-save_dir_path = "/mnt/aoni04/ogino/oki_project/Oki_Update/results/CycleGAN/test"
+test_data_path = "test_data directory path (ex. /root/dataset/MUBASE/test_data)"
+model_G_path = "trained model path (ex. /root/results/sample/G_modelA2B_245.pth)"
+save_dir_path = "save directory path (ex. /root/results/CycleGAN)"
 
 my_makedir(os.path.join(save_dir_path, "log"))
 log_path = os.path.join(save_dir_path, "log")

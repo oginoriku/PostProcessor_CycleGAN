@@ -12,7 +12,7 @@ import oct2py
 logging.basicConfig(level=logging.ERROR)
 oc = oct2py.Oct2Py(logger=logging.getLogger())
 
-COMPOSITE = "/mnt/aoni04/ogino/semetrics/semetrics/composite.m"
+COMPOSITE = "composite.m"
 
 def my_makedir(SAMPLE_DIR):
     if not os.path.exists(SAMPLE_DIR):

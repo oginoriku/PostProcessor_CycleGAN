@@ -1,5 +1,17 @@
 # PostProcessor CycleGAN
 
+## Data Generation
+以下のコマンドを実行してください。
+```
+python make_dataset.py 
+```
+**`make_dataset.py` 内の各パラメータについて**  
+```
+save_root_dir：データセットを保存するディレクトリのパス  
+timit_dir：TIMIT corpus（16kHz）のディレクトリパス (ex. /DB/TIMIT/by_speaker16000)
+```
+
+データは、学習時のデータロード時間を短縮するために、pickle形式で保存されます。  
 
 ## Training
 ポストプロセッサーの学習。
@@ -8,7 +20,7 @@
 ```
 bash main.sh
 ```
-**`main.sh ` 内の各パラメータについて**  
+**`main.sh` 内の各パラメータについて**  
 ```
 data_path：データセットのパス  
 save_path：学習結果を保存するディレクトリのパス  
@@ -28,7 +40,7 @@ total_epochs：学習エポック数
 python test.py 
 ```
 
-**`test.py ` 内の各パラメータについて**  
+**`test.py` 内の各パラメータについて**  
 ```
 n_cuda：推論に使用するGPUの番号  
 NUMBER_Test：推論に使うデータ数  

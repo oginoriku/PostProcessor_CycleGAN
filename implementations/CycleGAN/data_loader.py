@@ -1,20 +1,16 @@
-#-*-coding:utf-8-*-
-
 import numpy as np
 import os
 import sys
 from tqdm import tqdm
-
 from torch.utils.data import DataLoader
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '/mnt/aoni04/ogino/'))
 from utils import loadPickle
 
 def data_loader(data_path, clean_data_num, train_data_num, batch_size, val_data_num, val_batch_size, num_workers):
     # データセットのパスを定義
     clean_data_path = os.path.join(data_path, "clean_data")
     train_data_path = os.path.join(data_path, "train_data")
-    val_data_path = os.path.join(data_path, "val_data_wsj")
+    val_data_path = os.path.join(data_path, "test_data")
 
     print("=====================================Clean Data Loading============================================")
     cleanset = []
