@@ -4,6 +4,7 @@ import pickle
 import numpy as np
 import random
 from pesq import pesq
+from pystoi import stoi
 import scipy.signal as sp
 from scipy.io import wavfile
 import logging
